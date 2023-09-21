@@ -10,7 +10,7 @@
   <body>
     <div class="min-w-screen min-h-screen bg-violet-200 flex justify-center px-5 py-5">
       <div class="w-full max-w-6xl mx-auto rounded-xl bg-white shadow-lg p-5 text-black">
-        <h1 class="font-bold text-3xl text-center">GIT</h1>
+        <h1 class="font-bold text-3xl text-center pt-5">GIT</h1>
         <br />
         <p class="mb-3">
           <span class="font-bold">Git</span> merupakan salah <a class="text-blue-400 underline hover:text-blue-500 active:text-blue-600" href="https://en.wikipedia.org/wiki/Version_control">VCS (Version Control System)</a> yang diciptakan oleh Linus Torvalds, yang mana dulunya digunakan untuk pengembangan kernel Linux. Perbedaan dari git dengan version control lain adalah setiap kode yang ditulis oleh developer akan disimpan dalam riwayat disetiap perubahannya. Git tersedia untuk semua platform baik, unix like (seperti linux dan macos) maupun windows. untuk menginstallnya bisa masuk ke laman <a class="text-blue-400 underline hover:text-blue-500 active:text-blue-600" href="https://git-scm.com/downloads">officialnya</a>
@@ -32,17 +32,42 @@
           <p class="-ml-5">Ada banyak sekali perintah perintah yang ada dalam git. Berikut beberapa perintah yang sering digunakan:</p>
           <ul class="list-disc">
             <li>
-              git config<br/>
-              perintah ini berguna untuk konfigurasi git pada local komputer. Berikut contoh untuk konfigurasi email dan username pada git secara global.
+              git config. Perintah ini berguna untuk konfigurasi git pada local komputer. Berikut contoh untuk konfigurasi email dan username pada git secara global.
               <pre class="prettyprint bg-slate-200 rounded overflow-x-scroll"><code class="language-shell">$ git config --global user.name fmway
 $ git config --global user.email fm18lv@gmail.com</code></pre>
-              untuk lebih lengkapnya bisa ketik <code class="inline prettyprint bg-slate-200 px-1 overflow-x-sroll">git --help</code>
+              untuk lebih lengkapnya bisa ketik <code class="inline prettyprint bg-slate-200 px-1 overflow-x-sroll">git config --help</code>
             </li>
+            <li>
+              git init. Perintah ini adalahh untuk membuat git repository pada folder yang terbuka
+            </li>
+            <li>
+              git clone. jika git init untuk membuat git repository, git clone digunakan untuk mengklon git repository dari cloud (yang tentunya menggunakan git sebagai vcs-nya) ke lokal komputer. Contohnya ketika ingin mengklon repository https://github.com/fmway/promnet.git maka perintahnya adalah sebagai berikut.
+              <pre class="prettyprint bg-slate-200 rounded overflow-x-scroll"><code class="language-shell">$ git clone https://github.com/fmway/promnet.git
+# atau
+$ git clone https://github.com/fmway/promnet.git folderbaru</code></pre>
+              untuk lebih lengkapnya bisa ketik <code class="inline prettyprint bg-slate-200 px-1 overflow-x-sroll">git clone --help</code>
+            </li>
+            <li>
+              git add. Ketika developer merubah kode dan agar git tahu perubahan tersebut, developer harus menambahkan file tersebut ke dalam git. untuk menambahkannya adalah menggunakan git add. Berikut contoh menambahkan file yang diubah (main.html dan README.md) kedalam git
+              <pre class="prettyprint bg-slate-200 rounded overflow-x-scroll"><code class="language-shell">$ git add main.html README.md</code></pre>
+              jika file yang diubah banyak, developer dapat menyingkatnya menggunakan titik: <code class="inline prettyprint bg-slate-200 px-1 overflow-x-sroll">git add .</code>
+            </li>
+            <li>
+              git commit. Setelah menambahkannya kedalam git, langkah selanjutnya adalah memberikan commit / pesan mengenai perubahan kode tersebut. Contohnya, developer menambahkan fitur suara pada file main.html maka perintahnya adalah sebagai berikut.
+              <pre class="prettyprint bg-slate-200 rounded overflow-x-scroll"><code class="language-shell">$ git add main.html 
+$ git commit -m 'menambahkan fitur suara'</code></pre>
+              untuk lebih lengkapnya bisa ketik <code class="inline prettyprint bg-slate-200 px-1 overflow-x-sroll">git commit --help</code>
+            </li>
+            <li>
+              git status. perintah ini berfungsi untuk mengecek apakah ada perubahan pada file yang belum di commit atau belum
+            </li>
+            <li>git pull. perintah ini berfungsi untuk memastikan repository yang di lokal itu sudah paling up to date. untuk lebih lengkapnya bisa ketik <code class="inline prettyprint bg-slate-200 px-1 overflow-x-sroll">git pull --help</code>.</li>
+            <li>git push. perintah ini berfungsi untuk meng-upload repository yang ada di lokal ke repository yang ada di cloud. untuk lebih lengkapnya bisa ketik <code class="inline prettyprint bg-slate-200 px-1 overflow-x-sroll">git push --help</code>.</li>
           </ul>
         </div>
         
-        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-32">
-          <div class="border-t border-slate-200 pt-10 pb-16 dark:border-slate-200/5">
+        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+          <div class="border-t border-slate-200 pt-10 pb-5 dark:border-slate-200/5">
             <div class="text-center">
               <p class="text-slate-900 dark:text-white h-4 w-auto mx-auto">Mohamad Fikri a.k.a fmway</p>
               <p class="mt-4 text-sm leading-6 text-slate-500">© 2023 Namaku Inc. All rights reserved.</p>
