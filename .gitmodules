@@ -1,0 +1,3 @@
+[submodule "coder"]
+	path = coder
+	url = git@github.com:fmway/coder
