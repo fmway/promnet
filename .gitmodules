@@ -4,3 +4,6 @@
 [submodule "coder"]
 	path = coder
 	url = git@github.com:fmway/coder
+[submodule "BelajarJS"]
+	path = BelajarJS
+	url = git@github.com:fmway/BelajarJS.git
