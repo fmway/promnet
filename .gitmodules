@@ -7,3 +7,6 @@
 [submodule "todolist"]
 	path = todolist
 	url = git@github.com:fmway/BelajarJS.git
+[submodule "uts"]
+	path = uts
+	url = git@github.com:fmway/BelajarJS.git
