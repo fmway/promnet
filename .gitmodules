@@ -9,4 +9,4 @@
 	url = git@github.com:fmway/BelajarJS.git
 [submodule "uts"]
 	path = uts
-	url = git@github.com:fmway/BelajarJS.git
+	url = git@github.com:fmway/UTSPromnet.git
